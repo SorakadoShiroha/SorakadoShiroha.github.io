@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>王爽《汇编语言》1-3章 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="第一章 基础知识1.4 存储器&amp;emsp;&amp;emsp;存储器 (即内存)存放指令和数据。CPU从内存中读写信息。
+1.6 存储单元单位&amp;emsp;&amp;emsp;一个二进制位（0/1）即一个bit（比特,"> 
+    <meta name="author" content="sorakadoshiroha"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="王爽《汇编语言》1-3章 - Hexo"/>
+    <meta name="twitter:description" content="第一章 基础知识1.4 存储器&amp;emsp;&amp;emsp;存储器 (即内存)存放指令和数据。CPU从内存中读写信息。
+1.6 存储单元单位&amp;emsp;&amp;emsp;一个二进制位（0/1）即一个bit（比特,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="王爽《汇编语言》1-3章 - Hexo"/>
+    <meta property="og:description" content="第一章 基础知识1.4 存储器&amp;emsp;&amp;emsp;存储器 (即内存)存放指令和数据。CPU从内存中读写信息。
+1.6 存储单元单位&amp;emsp;&amp;emsp;一个二进制位（0/1）即一个bit（比特,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://sorakadoshiroha.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">王爽《汇编语言》1-3章</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">王爽《汇编语言》1-3章</h1>
+        <div class="stuff">
+            <span>十一月 25, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="第一章-基础知识"><a href="#第一章-基础知识" class="headerlink" title="第一章 基础知识"></a>第一章 基础知识</h2><h3 id="1-4-存储器"><a href="#1-4-存储器" class="headerlink" title="1.4 存储器"></a>1.4 存储器</h3><p>&emsp;&emsp;存储器 (即内存)存放指令和数据。CPU从内存中读写信息。</p>
+<h3 id="1-6-存储单元"><a href="#1-6-存储单元" class="headerlink" title="1.6 存储单元"></a>1.6 存储单元</h3><h4 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h4><p>&emsp;&emsp;一个二进制位（0/1）即一个bit（比特）<br>&emsp;&emsp;8个bit组成一个byte，即一个字节，8个二进制位（xxxx xxxx）<br>&emsp;&emsp;byte常用B来表示，1kb=1024b，1mb=1024kb。<br>一个存储单元可以存储1个byte。1个存储器有128（0-127）个存储单元，可以存储128个byte（8*128=1024个bit，即1024个0/1）</p>
+<h3 id="1-8-地址总线"><a href="#1-8-地址总线" class="headerlink" title="1.8 地址总线"></a>1.8 地址总线</h3><p>&emsp;&emsp;一根导线的状态仅有高电平和低电平两种，即0和1，可以传输一位二进制数据。10根导线则可以传输10位二进制数据，即10个1/0.这10个01可以表示2的10次方（1024）个数据。<br>&emsp;&emsp;1个CPU有N根地址线，则这个CPU的地址总线的宽度位N，最多可以寻找2的次方个内存单元。<br>    例如，N=1，只有0，1两个地址可以上传；N位2，则有00，01，10，11四个地址可以上传。</p>
+<h3 id="1-9-数据总线"><a href="#1-9-数据总线" class="headerlink" title="1.9 数据总线"></a>1.9 数据总线</h3><p>&emsp;&emsp;1根数据总线可以传送一个二进制数据，8根就是8位二进制数据，即一个字节，16根数据总线一次可传送8个字节。<br>&emsp;&emsp;8088CPU只有8根数据线，一此只能传递8位数据。若向内存写入89D8h（1000 1001 1101 1000）要进行两次数据传送。<br>##第二章 寄存器<br>&emsp;&emsp;寄存器是CPU中程序员可以用指令读写的部件，可以通过改变寄存器的内容实现对CPU的控制。<br>通用寄存器有ax，bx，cx，dx四个。<br>&emsp;&emsp;一个16位寄存器可以存放一个16的数据，从左到右为15–0.同时，这16为可以拆分为两个8位，即ax拆分为ah和al。</p>
+<h2 id="第二章-寄存器"><a href="#第二章-寄存器" class="headerlink" title="第二章 寄存器"></a>第二章 寄存器</h2><h3 id="2-2-字在寄存器中的存储"><a href="#2-2-字在寄存器中的存储" class="headerlink" title="2.2 字在寄存器中的存储"></a>2.2 字在寄存器中的存储</h3><p>&emsp;&emsp;字节，记为byte，一个字节由8个bit组成，可以存放于8位寄存器中。<br>&emsp;&emsp;字，记为word，一个字由两个字节组成，前半称为高位字节（高八位），后半称为低位字节（低八位）。</p>
+<h4 id="问题2-1"><a href="#问题2-1" class="headerlink" title="问题2.1"></a>问题2.1</h4><p>&emsp;&emsp;ax，bx值为8226h，运行add ax，bx后，8226h+8226h=1044ch。但1044c为1 0000 0100 0100 1100，超过了16位，所以ax值为 044ch。</p>
+<h3 id="2-6-给出物理地址的方法"><a href="#2-6-给出物理地址的方法" class="headerlink" title="2.6 给出物理地址的方法"></a>2.6 给出物理地址的方法</h3><p>&emsp;&emsp;8086CPU采用一种在内部用两个16位地址合成的方法来形成一个20位的物理地址。<br>这两个16位的地址一个是段地址一个是偏移地址，通过内部总线送入地址加法器合成为一个20位物理地址，物理地址=段地址x16+偏移地址。</p>
+<h4 id="为什么乘16"><a href="#为什么乘16" class="headerlink" title="为什么乘16"></a>为什么乘16</h4><p>&emsp;&emsp;一个数据的十进制形式左移1位，相当于乘10，一个数据的二进制形式左移N位 ，相当于该数据乘2的N次方；一个数据的十六进制形式左移1位，相当于乘16。即一个X进制的数据左移X位，相当于乘X。</p>
+<h3 id="2-8-段的概念"><a href="#2-8-段的概念" class="headerlink" title="2.8 段的概念"></a>2.8 段的概念</h3><p>&emsp;&emsp;段的划分来自于CPU。</p>
+<h3 id="2-9-段寄存器"><a href="#2-9-段寄存器" class="headerlink" title="2.9 段寄存器"></a>2.9 段寄存器</h3><p>&emsp;&emsp;段寄存器储存段地址，有CS,DS,SS,ES四个。</p>
+<h3 id="2-10-CS和IP"><a href="#2-10-CS和IP" class="headerlink" title="2.10 CS和IP"></a>2.10 CS和IP</h3><p>&emsp;&emsp;CS和IP寄存器指示CPU当前读取指令的地址，CS为代码段寄存器，IP为指令指针寄存器。CPU从CSx16+IP单元开始读取指令并执行。(CS:IP)</p>
+<h3 id="2-11-修改CS-IP"><a href="#2-11-修改CS-IP" class="headerlink" title="2.11 修改CS,IP"></a>2.11 修改CS,IP</h3><p>&emsp;&emsp;mov指令不能直接修改CS,IP的值<br>&emsp;&emsp;使用jmp指令修改。   jmp 段地址：偏移地址(jmp CS:IP)<br>&emsp;&emsp;若仅修改IP，可以使用jmp 寄存器指令，jmp ax 相当于mov IP，ax</p>
+<h3 id="2-12-代码段"><a href="#2-12-代码段" class="headerlink" title="2.12 代码段"></a>2.12 代码段</h3><p>&emsp;&emsp;对于8086，可以将长度小于等于66KB的一段代码存放在一组地址连续，起始地址为16倍数的内存单元中，这段内存就是我们定义的代码段</p>
+<h2 id="第三章-寄存器（内存访问）"><a href="#第三章-寄存器（内存访问）" class="headerlink" title="第三章 寄存器（内存访问）"></a>第三章 寄存器（内存访问）</h2><h3 id="3-1-字的存储"><a href="#3-1-字的存储" class="headerlink" title="3.1 字的存储"></a>3.1 字的存储</h3><p>&emsp;&emsp;一个字（word）用16为寄存器来存储，高八位存放高位字节，第八位存放低位字节。但一个内存单元只能存储一个字节，所以一个字要用两个地址连续的内存单元存放。<br>&emsp;&emsp;字单元由两个地址连续的内存单元组成。<br>&emsp;&emsp;起始地址为N的字单元称为N地址单元。</p>
+<h3 id="3-2-DS和-address"><a href="#3-2-DS和-address" class="headerlink" title="3.2 DS和[address]"></a>3.2 DS和[address]</h3><p>&emsp;&emsp;DS寄存器存放要访问的数据的段地址。</p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h4><p>mov al，[0]<br>&emsp;&emsp;  [  ]表示一个内存单元，其中的0表示其偏移地址，8086自动取ds中的数据作为段地址</p>
+<p>ds寄存器也百年用mov直接送入数据，一般间接送入：<br>&emsp;&emsp;mov ax，1000H<br>&emsp;&emsp;mov ds，ax</p>
+<h3 id="3-3-字的传送"><a href="#3-3-字的传送" class="headerlink" title="3.3 字的传送"></a>3.3 字的传送</h3><p>&emsp;&emsp;8086可以一次性传送一个字，mov指令中，若给出的寄存器是16位的，就进行16位数据的传送</p>
+<h3 id="3-7-CPU提供的栈机制"><a href="#3-7-CPU提供的栈机制" class="headerlink" title="3.7 CPU提供的栈机制"></a>3.7 CPU提供的栈机制</h3><p>&emsp;&emsp;8086的入栈和出栈操作都是以字为单位进行。<br>&emsp;&emsp;入栈时，栈顶从高地址向低地址方向增长。（从下往上，下面是高地址）</p>
+<h4 id="段寄存器SS和SP"><a href="#段寄存器SS和SP" class="headerlink" title="段寄存器SS和SP"></a>段寄存器SS和SP</h4><p>&emsp;&emsp;SS:SP指向栈顶元素，SP存放栈顶段地址，SP存放偏移地址。</p>
+<h5 id="push-ax"><a href="#push-ax" class="headerlink" title="push ax"></a>push ax</h5><p>&emsp;&emsp; SP=SP-2，SP指向当前栈顶的前面的单元，以此单元为新的栈顶。<br>&emsp;&emsp;送入数据。</p>
+<h5 id="pop-ax"><a href="#pop-ax" class="headerlink" title="pop ax"></a>pop ax</h5><p>&emsp;&emsp;SP=SP+2<br>&emsp;&emsp;弹出数据 </p>
+<h5 id="初始化栈顶"><a href="#初始化栈顶" class="headerlink" title="初始化栈顶"></a>初始化栈顶</h5><p>&emsp;&emsp;设置SS和SP</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
