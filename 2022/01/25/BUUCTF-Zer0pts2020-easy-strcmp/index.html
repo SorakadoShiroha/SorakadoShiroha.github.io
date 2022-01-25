@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BUUCTF [Zer0pts2020]easy strcmp - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="BUUCTF [Zer0pts2020]easy strcmp
+关键函数如图。
+##### 脚本（摘抄）：
+12345678910enc = &amp;quot;********CENSORED******,"> 
+    <meta name="author" content="sorakadoshiroha"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/o2.jpg"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="BUUCTF [Zer0pts2020]easy strcmp - Hexo"/>
+    <meta name="twitter:description" content="BUUCTF [Zer0pts2020]easy strcmp
+关键函数如图。
+##### 脚本（摘抄）：
+12345678910enc = &amp;quot;********CENSORED******,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="BUUCTF [Zer0pts2020]easy strcmp - Hexo"/>
+    <meta property="og:description" content="BUUCTF [Zer0pts2020]easy strcmp
+关键函数如图。
+##### 脚本（摘抄）：
+12345678910enc = &amp;quot;********CENSORED******,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://sorakadoshiroha.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">BUUCTF [Zer0pts2020]easy strcmp</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">BUUCTF [Zer0pts2020]easy strcmp</h1>
+        <div class="stuff">
+            <span>一月 25, 2022</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="BUUCTF-Zer0pts2020-easy-strcmp"><a href="#BUUCTF-Zer0pts2020-easy-strcmp" class="headerlink" title="BUUCTF [Zer0pts2020]easy strcmp"></a>BUUCTF [Zer0pts2020]easy strcmp</h2><img src="D:\blog\sorakadoshirohablog\source\_posts\BUUCTF-Zer0pts2020-easy-strcmp(1).png" alt="BUUCTF-Zer0pts2020-easy-strcmp(1)" style="zoom: 67%;" />
+关键函数如图。
+##### 脚本（摘抄）：
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">enc = <span class="string">&quot;********CENSORED********&quot;</span></span><br><span class="line">m = [<span class="number">0x410A4335494A0942</span>, <span class="number">0x0B0EF2F50BE619F0</span>, <span class="number">0x4F0A3A064A35282B</span>]</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line">flag = <span class="string">b&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    p = enc[i*<span class="number">8</span>:(i+<span class="number">1</span>)*<span class="number">8</span>]</span><br><span class="line">    a = binascii.b2a_hex(p.encode(<span class="string">&#x27;ascii&#x27;</span>)[::-<span class="number">1</span>])</span><br><span class="line">    b = binascii.a2b_hex(<span class="built_in">hex</span>(<span class="built_in">int</span>(a,<span class="number">16</span>) + m[i])[<span class="number">2</span>:])[::-<span class="number">1</span>]</span><br><span class="line">    flag += b</span><br><span class="line"><span class="built_in">print</span> (flag)</span><br></pre></td></tr></table></figure>
+##### binascii模块操作：
+>> import binascii
+将binary 转ascii并用十六进制表示
+>> str1 = b"hello world"  
+>> binascii.b2a_hex(b"hello world")            (binary to ascii)
+输出 b'68656c6c6f20776f726c64'
+相反操作
+>> binascii.a2b_hex(b'68656c6c6f20776f726c64')
+输出b'hello world'
+注：括号里内容为”xxx（2位数，不够用0补齐）“或b”xxx“
+
+<h5 id="对flag-b’-‘的解释"><a href="#对flag-b’-‘的解释" class="headerlink" title="对flag=b’ ‘的解释"></a>对flag=b’ ‘的解释</h5><p>a = b’h\x65llo’<br>这个是一个bytes字节 ， \x代表这是一个16进制，而一位十六进制代表了四位二进制，所以这里两位十六进制代表了8位二进制，也就是说这代表一个字节，最终解释出来是e<br>print(a)  直接打印出来的效果运行结果：b’hello’<br>bytes与str这两种实例不能在某些操作符(例如&gt;、==、+、%操作符)上面混用。<br>bytes是由8位值组成。在计算机里面str 等于 bytes， 而bytes却不等于str, 因为计算机bytes可以表示更多的格式，音频、视频、字符串、文档等等。<br>利用字符串的encode方法编码成bytes，默认为utf-8类型bytes.decode(‘编码类型’)：将bytes对象解码成字符串，默认使用utf-8进行解码。</p>
+<h5 id="字符串切片操作"><a href="#字符串切片操作" class="headerlink" title="字符串切片操作"></a>字符串切片操作</h5><p> p = enc[i*8:(i+1)*8]  下标 i*8到 (i+1)*8为1组<br>[::-1]三个变量，第三个为步长，此处意为逆向。（大小端存储）</p>
+<h5 id="对脚本的注释"><a href="#对脚本的注释" class="headerlink" title="对脚本的注释"></a>对脚本的注释</h5><p>p = enc[i*8:(i+1)*8]：将原串分为<strong><strong><strong><strong>、CENSORED、</strong></strong></strong></strong>三组<br>a = binascii.b2a_hex(p.encode(‘ascii’)[::-1])：执行后，有b’2a2a2a2a2a2a2a2a’、b’4445524f534e4543’、b’2a2a2a2a2a2a2a2a’<br>a = binascii.b2a_hex(p.encode(‘ascii’)[::-1])逆序输出字符串p的64位形式的ASCII码<br>c = binascii.a2b_hex(hex(int(a,16) + m[i])[2:])：<br>int(a,16)：a为16进制数，转换成10进制（a为字符串）<br>hex（）：hex() 函数用于将10进制整数转换成16进制，以字符串形式表示。</p>
+<h5 id="解释（整体）"><a href="#解释（整体）" class="headerlink" title="解释（整体）"></a>解释（整体）</h5><p>####### 第六行<br>切片，8个一组。<br>####### 第七行<br>a = binascii.b2a_hex(p.encode(‘ascii’)[::-1])<br>其中，p.encode(‘ascii’)执行后，********变成了b’********‘，[::-1]则是逆向输出，即因为大小端存储的原因，对数据进行处理时须逆向。<br>####### 第八行<br>hex(int(a,16) + m[i])      hex（）括号内的内容即题目进行的加密。这一部会输出16进制数，带0x的（字符串形式）。而紧随其后的[2:]则是对其进行切片，把0x去掉。最后输出字符串。但由于是倒着处理的，最后输出时需再次进行反向，故有[::-1]</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>本题加密在于先把字符串切分成三份，然后对每一份进行操作：将字符串化为16进制数，与题中m[i]相加，得到一个新的16进制数。这个新的16进制数化为字符串就得到了flag（有点凯撒密码那味了）总之这道题特别之处在于对字符串整体进行操作，而不是一个个的。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
