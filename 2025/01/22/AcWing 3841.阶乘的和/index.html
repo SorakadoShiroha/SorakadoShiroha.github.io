@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="AcWing 3841.阶乘的和计算阶乘并保存：123456for (int i &#x3D; 0; i &lt; 10; i++) &#123;    f[i] &#x3D; 1;      &#x2F;&#x2F; 初始化 f[i]。    for (int j &#x3D; i; j &gt; 0; j--) &#123; &#x2F;&#x2F; 计算阶乘。        f[i] *&#x3D; j;    &#125;&#125;  从f[0]到f[10]保存了0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2025/01/22/AcWing%203841.%E9%98%B6%E4%B9%98%E7%9A%84%E5%92%8C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="AcWing 3841.阶乘的和计算阶乘并保存：123456for (int i &#x3D; 0; i &lt; 10; i++) &#123;    f[i] &#x3D; 1;      &#x2F;&#x2F; 初始化 f[i]。    for (int j &#x3D; i; j &gt; 0; j--) &#123; &#x2F;&#x2F; 计算阶乘。        f[i] *&#x3D; j;    &#125;&#125;  从f[0]到f[10]保存了0">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-01-22T07:55:36.627Z">
+<meta property="article:modified_time" content="2025-01-22T11:42:07.709Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-AcWing 3841.阶乘的和" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/01/22/AcWing%203841.%E9%98%B6%E4%B9%98%E7%9A%84%E5%92%8C/" class="article-date">
+  <time class="dt-published" datetime="2025-01-22T07:55:36.627Z" itemprop="datePublished">2025-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="AcWing-3841-阶乘的和"><a href="#AcWing-3841-阶乘的和" class="headerlink" title="AcWing 3841.阶乘的和"></a>AcWing 3841.阶乘的和</h1><h2 id="计算阶乘并保存："><a href="#计算阶乘并保存：" class="headerlink" title="计算阶乘并保存："></a>计算阶乘并保存：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    f[i] = <span class="number">1</span>;      <span class="comment">// 初始化 f[i]。</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = i; j &gt; <span class="number">0</span>; j--) &#123; <span class="comment">// 计算阶乘。</span></span><br><span class="line">        f[i] *= j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从f[0]到f[10]保存了0!到10!<br>阶乘的计算过程：f[i]&#x3D;1  –&gt;   f[i]&#x3D;f[i]*j   (j&#x3D;i,j–)   例：1*5*4*3*2*1</p>
+<h2 id="计算阶乘之和"><a href="#计算阶乘之和" class="headerlink" title="计算阶乘之和"></a>计算阶乘之和</h2><p>判断n是否可以由1-10的阶乘中，若干个元素相加得到？</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; (<span class="number">1</span> &lt;&lt; <span class="number">10</span>); i++) &#123;<span class="comment">//遍历所有子集，i&lt;1024</span></span><br><span class="line">       <span class="type">int</span> s = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (i &gt;&gt; j &amp; <span class="number">1</span>) &#123; <span class="comment">// 检查第 j 位是否为 1。</span></span><br><span class="line">               s += f[j];</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       S.<span class="built_in">insert</span>(s); <span class="comment">// 插入子集和。</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>题目：n&#x3D; f[x1]+f[x2]+…f[xi] （x&gt;0）<strong>即从f[1]到f[10]中，任选几项相加</strong></p>
+<p>如何抽出几项？</p>
+<p><strong>一共有10项，可以使用二进制求解。将“1”表示为被抽出，“0”表示为未被抽出。例：000010011表示n&#x3D;f[x5]+f[x2]+f[x1]</strong></p>
+<h3 id="解析代码："><a href="#解析代码：" class="headerlink" title="解析代码："></a>解析代码：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; (<span class="number">1</span> &lt;&lt; <span class="number">10</span>); i++)</span><br></pre></td></tr></table></figure>
+
+<p>一共10项，即10位，若为1则对应位的f[xi]生效。10位二进制可以表示范围为0-1023，i的范围为 0000000001 ——1111111111（1—1023）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (i &gt;&gt; j &amp; <span class="number">1</span>) &#123; <span class="comment">// 检查第 j 位是否为 1。</span></span><br><span class="line">              s += f[j];</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure>
+
+<p>j属于0-9，i&gt;&gt;j表示对i右移，&amp;1表示对1与。<br>j&#x3D;0时，i不移动，例10001001<strong>1</strong>&amp;1<br>j&#x3D;1时，i右移1位，010010100<strong>1</strong>&amp;1<br>j&#x3D;4时，i右移4位，000010000<strong>1</strong>&amp;1</p>
+<p>示例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">5</span>;<span class="comment">//0000 0101</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++) &#123;</span><br><span class="line">    cout &lt;&lt; (i &gt;&gt; j   &amp;<span class="number">1</span>) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>out:  1 0 1 0</em></p>
+<p>示例2：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> j = <span class="number">45</span>;<span class="comment">//0010 1101</span></span><br><span class="line">cout &lt;&lt; (j &amp; <span class="number">0b111</span>) &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; (j &amp; <span class="number">7</span>) &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; (j &amp; <span class="number">0b11</span>)&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;(j &amp; <span class="number">0b1111</span>);</span><br></pre></td></tr></table></figure>
+
+<p><em>out:5 5 1 13</em>   </p>
+<p>即若i的第j+1位为1，则加上f[j]，即计算阶乘之和。例如，i循环到0000010010时，s&#x3D;f[1]+f[5]。每计算完一次i则加入set中。<strong>所以，通过i从0000000000到1111111111的循环，所有的相加可能性均会被加入到set当中。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/01/22/AcWing%203841.%E9%98%B6%E4%B9%98%E7%9A%84%E5%92%8C/" data-id="cm68m7kjl0000astd64814yeo" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/22/AcWing%203841.%E9%98%B6%E4%B9%98%E7%9A%84%E5%92%8C/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
