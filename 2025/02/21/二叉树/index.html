@@ -12,7 +12,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
   
   <title>
-    友情链接 |
+    AcWing 3555. 二叉树 |
     
     Hexo
   </title>
@@ -27,19 +27,19 @@
 
   
   
-    <meta name="description" content="本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https:&#x2F;&#x2F;d-sketon.top&#x2F; 备用地址：https:&#x2F;&#x2F;d-sketon.github.io&#x2F;  申请方法 添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们">
-<meta property="og:type" content="website">
-<meta property="og:title" content="友情链接">
-<meta property="og:url" content="http://example.com/friend/index.html">
+    <meta name="description" content="题目给定一个 nn 个结点（编号 1∼n1∼n）构成的二叉树，其根结点为 11 号点。 进行 mm 次询问，每次询问两个结点之间的最短路径长度。 树中所有边长均为 11。 输入格式第一行包含一个整数 TT，表示共有 TT 组测试数据。 每组数据第一行包含两个整数 n,mn,m。 接下来 nn 行，每行包含两个整数，其中第 ii 行的整数表示结点 ii 的子结点编号。如果没有子结点则输出 −1−1。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AcWing 3555. 二叉树">
+<meta property="og:url" content="http://example.com/2025/02/21/%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https:&#x2F;&#x2F;d-sketon.top&#x2F; 备用地址：https:&#x2F;&#x2F;d-sketon.github.io&#x2F;  申请方法 添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们">
+<meta property="og:description" content="题目给定一个 nn 个结点（编号 1∼n1∼n）构成的二叉树，其根结点为 11 号点。 进行 mm 次询问，每次询问两个结点之间的最短路径长度。 树中所有边长均为 11。 输入格式第一行包含一个整数 TT，表示共有 TT 组测试数据。 每组数据第一行包含两个整数 n,mn,m。 接下来 nn 行，每行包含两个整数，其中第 ii 行的整数表示结点 ii 的子结点编号。如果没有子结点则输出 −1−1。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/banner.webp">
-<meta property="article:published_time" content="2025-01-23T01:11:24.350Z">
-<meta property="article:modified_time" content="2025-01-23T01:11:24.350Z">
+<meta property="og:image" content="c:\Users\93458\AppData\Roaming\Typora\typora-user-images\image-20250221163636809.png">
+<meta property="article:published_time" content="2025-02-21T08:34:54.000Z">
+<meta property="article:modified_time" content="2025-02-21T10:06:49.613Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/banner.webp">
+<meta name="twitter:image" content="c:\Users\93458\AppData\Roaming\Typora\typora-user-images\image-20250221163636809.png">
   
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -166,7 +166,7 @@
       
     </picture>
     
-      <img fetchpriority="high" src="/images/banner.png" alt="友情链接">
+      <img fetchpriority="high" src="/images/banner.png" alt="AcWing 3555. 二叉树">
     
   
   <div id="header-outer">
@@ -175,7 +175,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">友情链接</h1>
+            <h1 data-aos="slide-up">AcWing 3555. 二叉树</h1>
           </a>
         
       
@@ -193,10 +193,19 @@
           <aside id="sidebar">
   
   
-  <div class="sidebar-wrapper ">
+  <div class="sidebar-wrapper wrap-sticky">
     <div class="sidebar-wrap" data-aos="fade-up">
       
-        <div class="sidebar-author">
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">输出样例：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%B7%9D%E7%A6%BB1"><span class="toc-number">3.</span> <span class="toc-text">计算距离1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%B7%9D%E7%A6%BB2"><span class="toc-number">4.</span> <span class="toc-text">计算距离2</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
   <div class="sidebar-author-name">John Doe</div>
   <div class="sidebar-description"></div>
@@ -255,8 +264,13 @@
     
   
 </div>
-
+</div>
       
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
       
     </div>
   </div>
@@ -266,13 +280,13 @@
   </div>
 </aside>
 
-          <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-二叉树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/friend/index.html" class="article-date-link" data-aos="zoom-in">
-    <time datetime="2025-01-23T01:11:24.350Z" itemprop="datePublished">2025-01-23</time>
-    <time style="display: none;" id="post-update-time">2025-01-23</time>
+  <a href="/2025/02/21/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-02-21T08:34:54.000Z" itemprop="datePublished">2025-02-21</time>
+    <time style="display: none;" id="post-update-time">2025-02-21</time>
   </a>
 </div>
 
@@ -285,33 +299,34 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h2 id="本站信息"><a href="#本站信息" class="headerlink" title="本站信息"></a>本站信息</h2><ul>
-<li>站名： 拔剑Sketon</li>
-<li>站长： 拔剑Sketon</li>
-<li>地址： <a target="_blank" rel="noopener" href="https://d-sketon.top/">https://d-sketon.top/</a></li>
-<li>备用地址：<a target="_blank" rel="noopener" href="https://d-sketon.github.io/">https://d-sketon.github.io/</a></li>
-</ul>
-<h2 id="申请方法"><a href="#申请方法" class="headerlink" title="申请方法"></a>申请方法</h2><ul>
-<li>添加本站后，在本页留言，格式如下</li>
-</ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">```yml</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="comment">#您的名字</span></span><br><span class="line">  <span class="attr">url:</span> <span class="comment">#您的网址</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="comment">#简短描述</span></span><br><span class="line">  <span class="attr">image:</span> <span class="comment">#一张图片</span></span><br><span class="line"><span class="string">```</span></span><br></pre></td></tr></table></figure>
+        <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给定一个 nn 个结点（编号 1∼n1∼n）构成的二叉树，其根结点为 11 号点。</p>
+<p>进行 mm 次询问，每次询问两个结点之间的最短路径长度。</p>
+<p>树中所有边长均为 11。</p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行包含一个整数 TT，表示共有 TT 组测试数据。</p>
+<p>每组数据第一行包含两个整数 n,mn,m。</p>
+<p>接下来 nn 行，每行包含两个整数，其中第 ii 行的整数表示结点 ii 的子结点编号。如果没有子结点则输出 −1−1。</p>
+<p>接下来 mm 行，每行包含两个整数，表示要询问的两个结点的编号。</p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>每组测试数据输出 mm 行，代表查询的两个结点之间的最短路径长度。</p>
+<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">8 4</span><br><span class="line">2 3</span><br><span class="line">4 5</span><br><span class="line">6 -1</span><br><span class="line">-1 -1</span><br><span class="line">-1 7</span><br><span class="line">-1 -1</span><br><span class="line">8 -1</span><br><span class="line">-1 -1</span><br><span class="line">1 6</span><br><span class="line">4 6</span><br><span class="line">4 5</span><br><span class="line">8 1</span><br></pre></td></tr></table></figure>
 
-<h2 id="小伙伴们"><a href="#小伙伴们" class="headerlink" title="小伙伴们"></a>小伙伴们</h2><div class="friend-wrap" data-aos="zoom-in"><div class="friend-item-wrap">
-    <a href="https://d-sketon.github.io/" rel="noopener external nofollow noreferrer" target="_blank"></a>
-    <div class="friend-icon-wrap">
-      <div class="friend-icon">
-          <img data-src="https://d-sketon.github.io/avatar/avatar.webp" data-sizes="auto" alt="D-Sketon" class="lazyload">
-      </div>
-    </div>
-    <div class="friend-info-wrap">
-      <div class="friend-name">
-          D-Sketon 
-      </div>
-      <div class="friend-desc">
-        一个车万人
-      </div>
-    </div>
-  </div></div>
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">4</span><br><span class="line">2</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>用例的树如下。</p>
+<p><img src="C:\Users\93458\AppData\Roaming\Typora\typora-user-images\image-20250221163636809.png" alt="image-20250221163636809"></p>
+<p>如何建树？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1010</span>;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> l[N], r[N], p[N];</span><br><span class="line"><span class="type">int</span> dist[N];	</span><br><span class="line"></span><br><span class="line"><span class="built_in">memset</span>(l, <span class="number">-1</span>, <span class="keyword">sizeof</span> <span class="number">1</span>);</span><br><span class="line"><span class="built_in">memset</span>(r, <span class="number">-1</span>, <span class="keyword">sizeof</span> <span class="number">1</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">	<span class="type">int</span> a, b;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	l[i] = a, r[i] = b;</span><br><span class="line">	<span class="keyword">if</span> (a != <span class="number">-1</span>) p[a] = i;</span><br><span class="line">	<span class="keyword">if</span> (b != <span class="number">-1</span>) p[b] = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>按组输入a，b表示当前节点的左孩子和右孩子。l[1]&#x3D;2,r[1]&#x3D;3,p[2]&#x3D;p[3]&#x3D;1–&gt;l[2]&#x3D;4,r[2]&#x3D;5,p[4]&#x3D;p[5]&#x3D;2。–&gt;l[3]&#x3D;6,r[3]&#x3D;-1,p[6]&#x3D;3–&gt;l[4]&#x3D;-1,r[4]&#x3D;-1。–&gt;l[5]&#x3D;-1,r[5]&#x3D;7,p[7]&#x3D;5–&gt;l[6]&#x3D;8,r[6]&#x3D;-1,p[8]&#x3D;6</p>
+<p>在每一轮循环中，输入第i个节点的两个孩子节点，-1表示空节点，保存在l[i]和r[i]中，同时，若输入的节点不为-1，则p[]&#x3D;i，保存输入节点的父节点。</p>
+<h3 id="计算距离1"><a href="#计算距离1" class="headerlink" title="计算距离1"></a>计算距离1</h3><p>首先计算各个节点到根节点的距离</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> u, <span class="type">int</span> d)</span> &#123;</span><br><span class="line">	dist[u] = d;</span><br><span class="line">	<span class="keyword">if</span> (l[u] != <span class="number">-1</span>) dfs(l[u], d + <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">if</span> (r[u] != <span class="number">-1</span>) dfs(r[u], d + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">dfs(<span class="number">1</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>调用dfs。u代表节点，d代表距离，dist[u]代表该节点距离根节点的距离。<br>初始参数1，0，根节点距离自己的距离为0。若其左孩子不为空，则递归调用，且每调用一次距离就加一。调用至-1后往右走。走到底返回上一层再往右。。。</p>
+<h3 id="计算距离2"><a href="#计算距离2" class="headerlink" title="计算距离2"></a>计算距离2</h3><p>找到欲求两个节点的公共祖先</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">get_lca</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">	<span class="keyword">if</span> (dist[a] &gt; dist[b]) swap(a, b);<span class="comment">//默认a在上b在下</span></span><br><span class="line">	<span class="keyword">while</span> (dist[a] &lt; dist[b]) b = p[b];<span class="comment">//若b在下，则b=b的父节点，往上爬直到和a平齐</span></span><br><span class="line">	<span class="keyword">while</span> (a != b) a = p[a], b = p[b];<span class="comment">//ab走不到一起，同时往上走</span></span><br><span class="line">	<span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<pre><code>cout &lt;&lt; dist[a] + dist[b] - dist[lca] * 2&lt;&lt;endl;
+</code></pre>
 
       
     </div>
@@ -329,6 +344,27 @@
     </footer>
   </div>
   
+  <nav id="article-nav" data-aos="fade-up">
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="二叉树先序建树，中序遍历" class="lazyload">
+        
+      
+      <a href="/2025/02/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%85%88%E5%BA%8F%E5%BB%BA%E6%A0%91%EF%BC%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          二叉树先序建树，中序遍历
+        
+      </h3>
+    </div>
+    
+  </nav>
+
 
 </article>
 
@@ -393,7 +429,16 @@
       <nav id="mobile-nav">
   <div class="sidebar-wrap">
     
-      <div class="sidebar-author">
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">输入样例：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%B7%E4%BE%8B%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">输出样例：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%B7%9D%E7%A6%BB1"><span class="toc-number">3.</span> <span class="toc-text">计算距离1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%B7%9D%E7%A6%BB2"><span class="toc-number">4.</span> <span class="toc-text">计算距离2</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
   <div class="sidebar-author-name">John Doe</div>
   <div class="sidebar-description"></div>
@@ -452,9 +497,14 @@
     
   
 </div>
-
+</div>
     
   </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
   
 </nav>
 
@@ -525,13 +575,13 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "John Doe",
-          title: "友情链接",
-          url: "http://example.com/friend/index.html",
+          title: "AcWing 3555. 二叉树",
+          url: "http://example.com/2025/02/21/%E4%BA%8C%E5%8F%89%E6%A0%91/",
           excerpt: "",
           description: "",
-          stripContent: "本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https://d-sketon.top/ 备用地址：https://d-sketon.github.io/  申请方法 添加本站后，在本页留言，格式如下  123456```yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片```  小伙伴们                                                               ",
-          date: "Thu Jan 23 2025 09:11:24 GMT+0800",
-          updated: "Thu Jan 23 2025 09:11:24 GMT+0800",
+          stripContent: "题目给定一个 nn 个结点（编号 1∼n1∼n）构成的二叉树，其根结点为 11 号点。 进行 mm 次询问，每次询问两个结点之间的最短路径长度。 树中所有边长均为 11。 输入格式第一行包含一个整数 TT，表示共有 TT 组测试数据。 每组数据第一行包含两个整数 n,mn,m。 接下来 nn 行，每行包含两个整数，其中第 ii 行的整数表示结点 ii 的子结点编号。如果没有子结点则输出 −1−1。 接下来 mm 行，每行包含两个整数，表示要询问的两个结点的编号。 输出格式每组测试数据输出 mm ",
+          date: "Fri Feb 21 2025 16:34:54 GMT+0800",
+          updated: "Fri Feb 21 2025 18:06:49 GMT+0800",
           cover: "/images/banner.png",
         };
       </script>

@@ -12,7 +12,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
   
   <title>
-    友情链接 |
+    字符串替换 |
     
     Hexo
   </title>
@@ -27,19 +27,17 @@
 
   
   
-    <meta name="description" content="本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https:&#x2F;&#x2F;d-sketon.top&#x2F; 备用地址：https:&#x2F;&#x2F;d-sketon.github.io&#x2F;  申请方法 添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们">
-<meta property="og:type" content="website">
-<meta property="og:title" content="友情链接">
-<meta property="og:url" content="http://example.com/friend/index.html">
+    <meta name="description" content="思路：以字符串 arr[] 000abc123abc456abc789abc*101为例。替换全部的abc1.strstr找到abc首次出现的位置2.存储abc之前的字符串000至res[]（结果数组）3.将arr清洗，去除abc及其之前的元素。arr–&gt;123abc456abc789*abc 重复以上过程，直到： arr[]:101res[0]:000res[1]:123res[2]:45">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串替换">
+<meta property="og:url" content="http://example.com/2025/02/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9B%BF%E6%8D%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https:&#x2F;&#x2F;d-sketon.top&#x2F; 备用地址：https:&#x2F;&#x2F;d-sketon.github.io&#x2F;  申请方法 添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们">
+<meta property="og:description" content="思路：以字符串 arr[] 000abc123abc456abc789abc*101为例。替换全部的abc1.strstr找到abc首次出现的位置2.存储abc之前的字符串000至res[]（结果数组）3.将arr清洗，去除abc及其之前的元素。arr–&gt;123abc456abc789*abc 重复以上过程，直到： arr[]:101res[0]:000res[1]:123res[2]:45">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/banner.webp">
-<meta property="article:published_time" content="2025-01-23T01:11:24.350Z">
-<meta property="article:modified_time" content="2025-01-23T01:11:24.350Z">
+<meta property="article:published_time" content="2025-02-12T09:42:59.000Z">
+<meta property="article:modified_time" content="2025-02-28T04:01:47.648Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/banner.webp">
   
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -166,7 +164,7 @@
       
     </picture>
     
-      <img fetchpriority="high" src="/images/banner.png" alt="友情链接">
+      <img fetchpriority="high" src="/images/banner.png" alt="字符串替换">
     
   
   <div id="header-outer">
@@ -175,7 +173,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">友情链接</h1>
+            <h1 data-aos="slide-up">字符串替换</h1>
           </a>
         
       
@@ -193,10 +191,19 @@
           <aside id="sidebar">
   
   
-  <div class="sidebar-wrapper ">
+  <div class="sidebar-wrapper wrap-sticky">
     <div class="sidebar-wrap" data-aos="fade-up">
       
-        <div class="sidebar-author">
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">思路：</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
   <div class="sidebar-author-name">John Doe</div>
   <div class="sidebar-description"></div>
@@ -255,8 +262,13 @@
     
   
 </div>
-
+</div>
       
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
       
     </div>
   </div>
@@ -266,13 +278,13 @@
   </div>
 </aside>
 
-          <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-字符串替换" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/friend/index.html" class="article-date-link" data-aos="zoom-in">
-    <time datetime="2025-01-23T01:11:24.350Z" itemprop="datePublished">2025-01-23</time>
-    <time style="display: none;" id="post-update-time">2025-01-23</time>
+  <a href="/2025/02/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9B%BF%E6%8D%A2/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-02-12T09:42:59.000Z" itemprop="datePublished">2025-02-12</time>
+    <time style="display: none;" id="post-update-time">2025-02-28</time>
   </a>
 </div>
 
@@ -285,33 +297,15 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h2 id="本站信息"><a href="#本站信息" class="headerlink" title="本站信息"></a>本站信息</h2><ul>
-<li>站名： 拔剑Sketon</li>
-<li>站长： 拔剑Sketon</li>
-<li>地址： <a target="_blank" rel="noopener" href="https://d-sketon.top/">https://d-sketon.top/</a></li>
-<li>备用地址：<a target="_blank" rel="noopener" href="https://d-sketon.github.io/">https://d-sketon.github.io/</a></li>
-</ul>
-<h2 id="申请方法"><a href="#申请方法" class="headerlink" title="申请方法"></a>申请方法</h2><ul>
-<li>添加本站后，在本页留言，格式如下</li>
-</ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">```yml</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="comment">#您的名字</span></span><br><span class="line">  <span class="attr">url:</span> <span class="comment">#您的网址</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="comment">#简短描述</span></span><br><span class="line">  <span class="attr">image:</span> <span class="comment">#一张图片</span></span><br><span class="line"><span class="string">```</span></span><br></pre></td></tr></table></figure>
+        <h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p>以字符串 arr[] <em>000<strong>abc</strong>123<strong>abc</strong>456<strong>abc</strong>789<strong>abc</strong>*</em>101<em>为例。替换全部的abc<br>1.strstr找到</em>abc<em>首次出现的位置<br>2.存储abc之前的字符串</em>000<em>至res[]（结果数组）<br>3.将arr清洗，去除abc及其之前的元素。arr–&gt;123<strong>abc</strong>456<strong>abc</strong>789*<em>abc</em></em></p>
+<p>重复以上过程，直到：</p>
+<p>arr[]:101<br>res[0]:000<br>res[1]:123<br>res[2]:456<br>res[3]:789</p>
+<p>循环输出：res[i]+替换字符串</p>
+<p>最后输出arr结尾。</p>
+<p>代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> flag = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//输入</span></span><br><span class="line">    <span class="type">char</span> arr[<span class="number">100</span>] = &#123; <span class="string">&#x27;\0&#x27;</span> &#125;;</span><br><span class="line">    fgets(arr, <span class="number">100</span>, <span class="built_in">stdin</span>);</span><br><span class="line">    arr[<span class="built_in">strlen</span>(arr) - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">    <span class="type">int</span> len = <span class="built_in">strlen</span>(arr);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> fin[<span class="number">100</span>] = &#123; <span class="string">&#x27;\0&#x27;</span> &#125;;</span><br><span class="line">    fgets(fin, <span class="number">100</span>, <span class="built_in">stdin</span>);</span><br><span class="line">    fin[<span class="built_in">strlen</span>(fin) - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">    <span class="type">int</span> flen = <span class="built_in">strlen</span>(fin);</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> ch[<span class="number">100</span>] = &#123; <span class="string">&#x27;\0&#x27;</span> &#125;;</span><br><span class="line">    fgets(ch, <span class="number">100</span>, <span class="built_in">stdin</span>);</span><br><span class="line">    ch[<span class="built_in">strlen</span>(ch) - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="type">char</span> res [<span class="number">100</span>][<span class="number">100</span>] = &#123; <span class="string">&#x27;\0&#x27;</span> &#125;;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> tmp[<span class="number">100</span>] = &#123; <span class="string">&#x27;\0&#x27;</span> &#125;;</span><br><span class="line">    <span class="type">int</span> head = <span class="number">0</span>, rear = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">strstr</span>(arr, fin)!=<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="type">char</span>* p = <span class="built_in">strstr</span>(arr, fin);</span><br><span class="line">        <span class="type">char</span> po = p - arr;<span class="comment">//存储相同字符串首次出现的位置</span></span><br><span class="line">        <span class="keyword">if</span> (po == <span class="number">0</span> &amp;&amp; i == <span class="number">0</span>) head = <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">if</span>(po&gt;<span class="number">0</span>) <span class="built_in">strncat</span>(res[i++], arr, po);<span class="comment">//存储此之前的源字符串</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j= po + flen,k=<span class="number">0</span>; j &lt; len;j++) &#123;<span class="comment">//中间字符串保留去除元素后的结果</span></span><br><span class="line">            tmp[k++] = arr[j];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">memset</span>(arr, <span class="string">&#x27;\0&#x27;</span>, <span class="keyword">sizeof</span>(arr));<span class="comment">//清洗源字符串</span></span><br><span class="line">        len -= (po + flen);</span><br><span class="line">        <span class="keyword">if</span> (po == <span class="number">0</span> &amp;&amp; len == <span class="number">0</span>) rear = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">strcpy</span>(arr, tmp);</span><br><span class="line">        <span class="built_in">memset</span>(tmp, <span class="string">&#x27;\0&#x27;</span>, <span class="keyword">sizeof</span>(tmp));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="number">1</span>) <span class="built_in">puts</span>(ch);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(res[j]);</span><br><span class="line">        <span class="built_in">puts</span>(ch);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">puts</span>(arr);</span><br><span class="line">    <span class="keyword">if</span> (rear == <span class="number">1</span>) <span class="built_in">puts</span>(ch);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="小伙伴们"><a href="#小伙伴们" class="headerlink" title="小伙伴们"></a>小伙伴们</h2><div class="friend-wrap" data-aos="zoom-in"><div class="friend-item-wrap">
-    <a href="https://d-sketon.github.io/" rel="noopener external nofollow noreferrer" target="_blank"></a>
-    <div class="friend-icon-wrap">
-      <div class="friend-icon">
-          <img data-src="https://d-sketon.github.io/avatar/avatar.webp" data-sizes="auto" alt="D-Sketon" class="lazyload">
-      </div>
-    </div>
-    <div class="friend-info-wrap">
-      <div class="friend-name">
-          D-Sketon 
-      </div>
-      <div class="friend-desc">
-        一个车万人
-      </div>
-    </div>
-  </div></div>
+<p>一个缺陷：puts自动输出回车，改为循环即可。</p>
 
       
     </div>
@@ -329,6 +323,43 @@
     </footer>
   </div>
   
+  <nav id="article-nav" data-aos="fade-up">
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="二叉树先序建树，中序遍历" class="lazyload">
+          
+        
+        <a href="/2025/02/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%85%88%E5%BA%8F%E5%BB%BA%E6%A0%91%EF%BC%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            二叉树先序建树，中序遍历
+          
+        </h3>
+      </div>
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="acwing3544.寻找变化前的01序列" class="lazyload">
+        
+      
+      <a href="/2025/02/09/%E5%AF%BB%E6%89%BE%E5%8F%98%E5%8C%96%E5%89%8D%E7%9A%8401%E5%BA%8F%E5%88%97/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          acwing3544.寻找变化前的01序列
+        
+      </h3>
+    </div>
+    
+  </nav>
+
 
 </article>
 
@@ -393,7 +424,16 @@
       <nav id="mobile-nav">
   <div class="sidebar-wrap">
     
-      <div class="sidebar-author">
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">思路：</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
   <div class="sidebar-author-name">John Doe</div>
   <div class="sidebar-description"></div>
@@ -452,9 +492,14 @@
     
   
 </div>
-
+</div>
     
   </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
   
 </nav>
 
@@ -525,13 +570,13 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "John Doe",
-          title: "友情链接",
-          url: "http://example.com/friend/index.html",
+          title: "字符串替换",
+          url: "http://example.com/2025/02/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9B%BF%E6%8D%A2/",
           excerpt: "",
           description: "",
-          stripContent: "本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https://d-sketon.top/ 备用地址：https://d-sketon.github.io/  申请方法 添加本站后，在本页留言，格式如下  123456```yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片```  小伙伴们                                                               ",
-          date: "Thu Jan 23 2025 09:11:24 GMT+0800",
-          updated: "Thu Jan 23 2025 09:11:24 GMT+0800",
+          stripContent: "思路：以字符串 arr[] 000abc123abc456abc789abc*101为例。替换全部的abc1.strstr找到abc首次出现的位置2.存储abc之前的字符串000至res[]（结果数组）3.将arr清洗，去除abc及其之前的元素。arr–&amp;gt;123abc456abc789*abc 重复以上过程，直到： arr[]:101res[0]:000res[1]:123res[2]:456res[3]:789 循环输出：res[i]+替换字符串 最后输出arr结尾。 代码： 12345",
+          date: "Wed Feb 12 2025 17:42:59 GMT+0800",
+          updated: "Fri Feb 28 2025 12:01:47 GMT+0800",
           cover: "/images/banner.png",
         };
       </script>

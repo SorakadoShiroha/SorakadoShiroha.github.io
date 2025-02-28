@@ -12,7 +12,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
   
   <title>
-    友情链接 |
+    二叉树先序建树，中序遍历 |
     
     Hexo
   </title>
@@ -27,19 +27,19 @@
 
   
   
-    <meta name="description" content="本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https:&#x2F;&#x2F;d-sketon.top&#x2F; 备用地址：https:&#x2F;&#x2F;d-sketon.github.io&#x2F;  申请方法 添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们">
-<meta property="og:type" content="website">
-<meta property="og:title" content="友情链接">
-<meta property="og:url" content="http://example.com/friend/index.html">
+    <meta name="description" content="题目编一个程序，读入用户输入的一串先序遍历字符串，根据此字符串建立一个二叉树（以指针方式存储）。 例如如下的先序遍历字符串： ABC##DE#G##F### 其中“#”表示的是空格，空格字符代表空树。建立起此二叉树以后，再对二叉树进行中序遍历，输出遍历结果。  代码1234567891011121314151617181920212223242526272829303132333435#defin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树先序建树，中序遍历">
+<meta property="og:url" content="http://example.com/2025/02/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%85%88%E5%BA%8F%E5%BB%BA%E6%A0%91%EF%BC%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https:&#x2F;&#x2F;d-sketon.top&#x2F; 备用地址：https:&#x2F;&#x2F;d-sketon.github.io&#x2F;  申请方法 添加本站后，在本页留言，格式如下  123456&#96;&#96;&#96;yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片&#96;&#96;&#96;  小伙伴们">
+<meta property="og:description" content="题目编一个程序，读入用户输入的一串先序遍历字符串，根据此字符串建立一个二叉树（以指针方式存储）。 例如如下的先序遍历字符串： ABC##DE#G##F### 其中“#”表示的是空格，空格字符代表空树。建立起此二叉树以后，再对二叉树进行中序遍历，输出遍历结果。  代码1234567891011121314151617181920212223242526272829303132333435#defin">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/banner.webp">
-<meta property="article:published_time" content="2025-01-23T01:11:24.350Z">
-<meta property="article:modified_time" content="2025-01-23T01:11:24.350Z">
+<meta property="og:image" content="c:\Users\93458\AppData\Roaming\Typora\typora-user-images\image-20250219171619883.png">
+<meta property="article:published_time" content="2025-02-19T08:30:19.000Z">
+<meta property="article:modified_time" content="2025-02-20T09:46:35.971Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/banner.webp">
+<meta name="twitter:image" content="c:\Users\93458\AppData\Roaming\Typora\typora-user-images\image-20250219171619883.png">
   
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -166,7 +166,7 @@
       
     </picture>
     
-      <img fetchpriority="high" src="/images/banner.png" alt="友情链接">
+      <img fetchpriority="high" src="/images/banner.png" alt="二叉树先序建树，中序遍历">
     
   
   <div id="header-outer">
@@ -175,7 +175,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">友情链接</h1>
+            <h1 data-aos="slide-up">二叉树先序建树，中序遍历</h1>
           </a>
         
       
@@ -193,10 +193,19 @@
           <aside id="sidebar">
   
   
-  <div class="sidebar-wrapper ">
+  <div class="sidebar-wrapper wrap-sticky">
     <div class="sidebar-wrap" data-aos="fade-up">
       
-        <div class="sidebar-author">
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E6%89%A7%E8%A1%8C%E9%80%BB%E8%BE%91"><span class="toc-number">3.</span> <span class="toc-text">用例执行逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%8D%E5%8E%86"><span class="toc-number">4.</span> <span class="toc-text">遍历</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
   <div class="sidebar-author-name">John Doe</div>
   <div class="sidebar-description"></div>
@@ -255,8 +264,13 @@
     
   
 </div>
-
+</div>
       
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
       
     </div>
   </div>
@@ -266,13 +280,13 @@
   </div>
 </aside>
 
-          <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-二叉树先序建树，中序遍历" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/friend/index.html" class="article-date-link" data-aos="zoom-in">
-    <time datetime="2025-01-23T01:11:24.350Z" itemprop="datePublished">2025-01-23</time>
-    <time style="display: none;" id="post-update-time">2025-01-23</time>
+  <a href="/2025/02/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%85%88%E5%BA%8F%E5%BB%BA%E6%A0%91%EF%BC%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-02-19T08:30:19.000Z" itemprop="datePublished">2025-02-19</time>
+    <time style="display: none;" id="post-update-time">2025-02-20</time>
   </a>
 </div>
 
@@ -285,33 +299,14 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h2 id="本站信息"><a href="#本站信息" class="headerlink" title="本站信息"></a>本站信息</h2><ul>
-<li>站名： 拔剑Sketon</li>
-<li>站长： 拔剑Sketon</li>
-<li>地址： <a target="_blank" rel="noopener" href="https://d-sketon.top/">https://d-sketon.top/</a></li>
-<li>备用地址：<a target="_blank" rel="noopener" href="https://d-sketon.github.io/">https://d-sketon.github.io/</a></li>
-</ul>
-<h2 id="申请方法"><a href="#申请方法" class="headerlink" title="申请方法"></a>申请方法</h2><ul>
-<li>添加本站后，在本页留言，格式如下</li>
-</ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">```yml</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="comment">#您的名字</span></span><br><span class="line">  <span class="attr">url:</span> <span class="comment">#您的网址</span></span><br><span class="line">  <span class="attr">desc:</span> <span class="comment">#简短描述</span></span><br><span class="line">  <span class="attr">image:</span> <span class="comment">#一张图片</span></span><br><span class="line"><span class="string">```</span></span><br></pre></td></tr></table></figure>
+        <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>编一个程序，读入用户输入的一串先序遍历字符串，根据此字符串建立一个二叉树（以指针方式存储）。 例如如下的先序遍历字符串： ABC##DE#G##F### 其中“#”表示的是空格，空格字符代表空树。建立起此二叉树以后，再对二叉树进行中序遍历，输出遍历结果。</p>
+<p><img src="C:\Users\93458\AppData\Roaming\Typora\typora-user-images\image-20250219171619883.png" alt="image-20250219171619883"></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N1 = <span class="number">1e8</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N2 = <span class="number">1e2</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> pos, len, t;</span><br><span class="line"><span class="type">char</span> tree[N1];</span><br><span class="line"><span class="type">char</span> str[N2];</span><br><span class="line"><span class="type">void</span> <span class="title function_">create</span><span class="params">(<span class="type">int</span> pos)</span><span class="comment">//建立二叉树</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> c = str[t++];</span><br><span class="line">    <span class="keyword">if</span> (c == <span class="string">&#x27;#&#x27;</span>)<span class="comment">//若是‘#’，说明该节点为空返回上一级节点</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    tree[pos] = c;<span class="comment">//若不是‘#’，为本节点赋值</span></span><br><span class="line">    create(pos * <span class="number">2</span>);<span class="comment">//递归创建左子树</span></span><br><span class="line">    create(pos * <span class="number">2</span> + <span class="number">1</span>);<span class="comment">//递归创建右子树</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">traverse</span><span class="params">(<span class="type">int</span> root)</span><span class="comment">//中序遍历二叉树</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (tree[root] == <span class="number">0</span>)<span class="comment">//如果该节点为0，说明该节点为空，返回上一级</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    traverse(<span class="number">2</span> * root);<span class="comment">//先遍历左子树</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c &quot;</span>, tree[root]);<span class="comment">//遍历完左子树后，访问本节点</span></span><br><span class="line">    traverse(<span class="number">2</span> * root + <span class="number">1</span>);<span class="comment">//再遍历右子树</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, str) != EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        t = <span class="number">0</span>;</span><br><span class="line">        create(<span class="number">1</span>);</span><br><span class="line">        traverse(<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="小伙伴们"><a href="#小伙伴们" class="headerlink" title="小伙伴们"></a>小伙伴们</h2><div class="friend-wrap" data-aos="zoom-in"><div class="friend-item-wrap">
-    <a href="https://d-sketon.github.io/" rel="noopener external nofollow noreferrer" target="_blank"></a>
-    <div class="friend-icon-wrap">
-      <div class="friend-icon">
-          <img data-src="https://d-sketon.github.io/avatar/avatar.webp" data-sizes="auto" alt="D-Sketon" class="lazyload">
-      </div>
-    </div>
-    <div class="friend-info-wrap">
-      <div class="friend-name">
-          D-Sketon 
-      </div>
-      <div class="friend-desc">
-        一个车万人
-      </div>
-    </div>
-  </div></div>
+<h3 id="用例执行逻辑"><a href="#用例执行逻辑" class="headerlink" title="用例执行逻辑"></a>用例执行逻辑</h3><p>输入ABC##DE#G##F### ，进入create函数。<br>判断当前字符是否为#，若不是，则为本节点赋值。<br>赋值后，递归调用create函数，方向一路朝左。<br>若当前字符为#，则return（至上一层）。函数继续向下运行，调用create ，这次是右子树。</p>
+<p>A–&gt;A左孩子B–&gt;B左孩子C–&gt;C左孩子#—&gt;返回–&gt;C右孩子#—&gt;返回<br>						  –&gt; B右孩子D–&gt;D左孩子E–&gt;E左孩子#–&gt;返回–&gt;E右孩子G–&gt;G左孩子#–&gt;返回–&gt;G右孩子#–&gt;返回										      –&gt;D右孩子F–&gt;F双返回–&gt;D右孩子—						–									   –&gt;返回—<br>			        –&gt;A右孩子#–&gt;返回全 														</p>
+<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>一路最左，发现0空节点，返回上层打印，走到最左边后该往右走了。</p>
+<p>A–&gt;A左孩子B–&gt;B左孩子C–&gt;C左孩子空—&gt;返回–&gt;<br>										  打印<strong>C</strong>–&gt;C右孩子空—&gt;函数到底返回–&gt;<br>						       打印<strong>B</strong>–&gt; B右孩子D–&gt;D左孩子E–&gt;E左孩子空–&gt;返回–&gt;<br>																		打印<strong>E</strong>–&gt;E右孩子G–&gt;G左孩子空–&gt;返回<br>																										 打印<strong>G</strong>–&gt;G右孩子空–&gt;函数到底返回–&gt;E到右孩子到底返回–&gt;           –&gt;打印<strong>D</strong>–&gt;D右孩子F–&gt;F左孩子空–&gt;返回–&gt;<br>																						   –&gt;打印<strong>F</strong>–&gt;F左孩子空–&gt;函数到底返回–&gt;D到右孩子到底返回–&gt; B到右孩子到底返回–&gt; A左孩子空–&gt;返回												 		</p>
 
       
     </div>
@@ -329,6 +324,43 @@
     </footer>
   </div>
   
+  <nav id="article-nav" data-aos="fade-up">
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="AcWing 3555. 二叉树" class="lazyload">
+          
+        
+        <a href="/2025/02/21/%E4%BA%8C%E5%8F%89%E6%A0%91/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            AcWing 3555. 二叉树
+          
+        </h3>
+      </div>
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        
+        
+          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="字符串替换" class="lazyload">
+        
+      
+      <a href="/2025/02/12/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9B%BF%E6%8D%A2/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          字符串替换
+        
+      </h3>
+    </div>
+    
+  </nav>
+
 
 </article>
 
@@ -393,7 +425,16 @@
       <nav id="mobile-nav">
   <div class="sidebar-wrap">
     
-      <div class="sidebar-author">
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E4%BE%8B%E6%89%A7%E8%A1%8C%E9%80%BB%E8%BE%91"><span class="toc-number">3.</span> <span class="toc-text">用例执行逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%8D%E5%8E%86"><span class="toc-number">4.</span> <span class="toc-text">遍历</span></a></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="John Doe" class="lazyload">
   <div class="sidebar-author-name">John Doe</div>
   <div class="sidebar-description"></div>
@@ -452,9 +493,14 @@
     
   
 </div>
-
+</div>
     
   </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
   
 </nav>
 
@@ -525,13 +571,13 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "John Doe",
-          title: "友情链接",
-          url: "http://example.com/friend/index.html",
+          title: "二叉树先序建树，中序遍历",
+          url: "http://example.com/2025/02/19/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%85%88%E5%BA%8F%E5%BB%BA%E6%A0%91%EF%BC%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/",
           excerpt: "",
           description: "",
-          stripContent: "本站信息 站名： 拔剑Sketon 站长： 拔剑Sketon 地址： https://d-sketon.top/ 备用地址：https://d-sketon.github.io/  申请方法 添加本站后，在本页留言，格式如下  123456```yml- name: #您的名字  url: #您的网址  desc: #简短描述  image: #一张图片```  小伙伴们                                                               ",
-          date: "Thu Jan 23 2025 09:11:24 GMT+0800",
-          updated: "Thu Jan 23 2025 09:11:24 GMT+0800",
+          stripContent: "题目编一个程序，读入用户输入的一串先序遍历字符串，根据此字符串建立一个二叉树（以指针方式存储）。 例如如下的先序遍历字符串： ABC##DE#G##F### 其中“#”表示的是空格，空格字符代表空树。建立起此二叉树以后，再对二叉树进行中序遍历，输出遍历结果。  代码1234567891011121314151617181920212223242526272829303132333435#define _CRT_SECURE_NO_WARNINGS#include&amp;lt;stdio.h&amp;gt;#i",
+          date: "Wed Feb 19 2025 16:30:19 GMT+0800",
+          updated: "Thu Feb 20 2025 17:46:35 GMT+0800",
           cover: "/images/banner.png",
         };
       </script>
